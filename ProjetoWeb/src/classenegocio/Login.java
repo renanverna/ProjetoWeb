@@ -1,5 +1,8 @@
 package classenegocio;
 
+import dataacessobject.LoginDAO;
+import transferobject.LoginTO;
+
 public class Login {
 	private int id;
 	private String usuario;
@@ -17,10 +20,7 @@ public class Login {
 		this.usuario=usuario;
 		this.senha=senha;
 	}
-	
-
-	
-	
+		
 	
 	public int getId() {
 		return id;
@@ -41,16 +41,13 @@ public class Login {
 		this.senha = senha;
 	}
 	
+	
+	public void carregar()	{
+		LoginDAO dao = new LoginDAO();
+		LoginTO to = dao.carregar(id);
+		usuario = to.getUsuario();
+		senha = to.getSenha();
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}
 	
 }
