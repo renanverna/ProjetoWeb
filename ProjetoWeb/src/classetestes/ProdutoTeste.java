@@ -3,8 +3,7 @@ package classetestes;
 import java.text.ParseException;
 
 import classenegocio.Produto;
-import classenegocio.Venda;
-import classenegocio.VendaItem;
+import transferobject.ProdutoTO;
 
 public class ProdutoTeste {
 
@@ -12,15 +11,20 @@ public class ProdutoTeste {
 		//Produto produto = new Produto("SMINORF", 1.0 ,1.0, 800);
 		Produto produto = new Produto();
 		
-		produto.setDescricao("SWmiNorf");
-		produto.setValor_compra(10.5);
-		produto.setValor_venda(11.95);
-		produto.setQuantidade_estoque(9600);
-		produto.criar();
+
+		produto.carregar();
+			
+		//produto.setDescricao("SWmiNorf");
+	    //produto.setValor_compra(10.5);
+		//produto.setValor_venda(11.95);
+		//produto.setQuantidade_estoque(9600);
+		//produto.criar();
 		//Venda v = new Venda();
 		//v.criar();
-		produto.carregar();
-		System.out.println(produto);
+		
+		System.out.println(produto.getId());
+		
+		
 		//Produto produto = new Produto();
 	
 			

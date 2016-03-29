@@ -8,10 +8,7 @@
 <title>Produto</title>
 </head>
 <body>
-	<%ProdutoTO to = (ProdutoTO)request.getAttribute("produto"); %>
-	Id: <%=to.getId() %><br>
-	Descrição: <%=to.getDescricao() %><br>
-	Valor_compra: <%=to.getValor_compra() %><br>
-	Valor_Venda: <%=to.getValor_venda() %><br>
+	<%ProdutoTO p = (ProdutoTO)request.getAttribute("produto"); %>
+	Id: <%=p.getId() %><br>
 </body>
 </html>

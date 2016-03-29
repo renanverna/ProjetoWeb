@@ -35,19 +35,25 @@ public class ManterProduto extends HttpServlet {
 		
 		Produto produto = new Produto(pDescricao, valorCompra, valorVenda, 20);
 		
-		if(pAcao.equals("Inserir")){
+		if("Inserir".equals(pAcao)){
 			produto.criar();
 		}
 		produto.carregar();
 	
 		
 		ProdutoTO to = new ProdutoTO();
-		System.out.println(produto.getId());
+		
 		
 		to.setId(produto.getId());
 		to.setDescricao(produto.getDescricao());
 		to.setValor_compra(produto.getValor_compra());
 		to.setValor_venda(produto.getValor_venda());
+		
+		System.out.println(to.getId());
+		System.out.println(to.getDescricao());
+		System.out.println(to.getValor_compra());
+		System.out.println(to.getValor_venda());
+	
 		
 		RequestDispatcher view = 
 				request.getRequestDispatcher("Produto.jsp");
