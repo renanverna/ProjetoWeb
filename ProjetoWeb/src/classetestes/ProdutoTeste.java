@@ -15,7 +15,7 @@ public class ProdutoTeste {
 		produto.setDescricao("SWmiNorf");
 		produto.setValor_compra(10.5);
 		produto.setValor_venda(11.95);
-		produto.setQuantidade_estoque(9000);
+		produto.setQuantidade_estoque(9600);
 		produto.criar();
 		//Venda v = new Venda();
 		//v.criar();
