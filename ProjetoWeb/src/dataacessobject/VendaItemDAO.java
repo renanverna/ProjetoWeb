@@ -30,7 +30,7 @@ public class VendaItemDAO {
 		   }	
 			}
 	
-
+/*/
 	
 	public VendaItemTO carregar(int id) {
 		VendaItemTO to = new VendaItemTO();
@@ -54,7 +54,7 @@ public class VendaItemDAO {
 				}	
 	
 	
-
+/*/
 	
 	
 	}
