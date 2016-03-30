@@ -40,6 +40,24 @@ $('#controllerbc').change(function(){
 	});
 	
 	
+	
+	$('#btinserirv').click(function(){
+		var codvenda = $('#icodvenda').val();
+		var codprodv = $('#icodproduto').val();
+		var vquantidade = $('#iquantidade').val();
+		var valortotalv = $('#ivalortotal').val();
+		
+		alert("Produto inserido com sucesso");
+		$.post("ManterController.do",{
+		 acao:"inserir",
+		 covendav:codvenda,
+		 codprodv:codprodv,
+		 qntv:vquantidade,
+		 vtotalv:valortotalv
+		},function(){});
+	});
+	
+	
 $('#btp1').click(function(){
 var vid = $('#iidp').val();
 var dsc = $('#idescricao').val();
@@ -83,15 +101,24 @@ $('#btp2').click(function(){
 	});
 	
 
-		$('#btvoltar').click(function(){
-			var vid = $('#iidp').val();
-			alert("ERRO NO BOTAO");
-			$.post("ManterController.do",{
-				acao:"voltar",
-			},function(){});
-		});
-		
+	$('#btvoltar').click(function(){
+		$('#hcontrolleractualize').html("");
+		$('#tformproduto').hide();
+		$('#tformproduto2').hide();
+		$('#btinserir').hide();
+		$('#btp1').hide();
+		$('#btp2').hide();
+		$('#btp3').hide();
+		$('#btvoltar').hide();
+		$('#tformvenda').hide();
+		$('#tformvenda2').hide();
+		$('#btinserir').hide();
+		$('#btvoltar').hide();
+		$('#controllerbc').show("Slow");
 		
 	});
+		
+		
+});
 });
 

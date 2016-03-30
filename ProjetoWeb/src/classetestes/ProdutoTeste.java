@@ -2,6 +2,8 @@ package classetestes;
 
 import java.text.ParseException;
 
+import classenegocio.VendaItem;
+
 
 public class ProdutoTeste {
 
@@ -9,15 +11,11 @@ public class ProdutoTeste {
 		//Produto produto = new Produto("SMINORF", 1.0 ,1.0, 800);
 		//Produto produto = new Produto();
 		
-		int id = 9;
-		String x = null;
-		String y = null;
+		
+	
 		
 		
 		
-		if ((id >= 0) && (x == null || y == null)) {
-		    System.out.println("OK");
-		}
 		//produto.carregar();
 			
 		//produto.setDescricao("SWmiNorf");
