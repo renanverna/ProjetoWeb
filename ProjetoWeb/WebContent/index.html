@@ -2,19 +2,45 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Cadastro de Produto</title>
+<link rel="stylesheet" href="NewEstiloController.css">
+<title>Controller REMAP</title>
 </head>
 <body>
-	<h3>Cadastro de Produto</h3>
-	<form action="ManterProduto.do" method="post">
+	<h1 id="hcontrolleractualize"></h1>
+	<form action="ManterController.do" method="post">
+	<center><select name="controllerremap" from="controllerform" id="controllerbc" onchange="displayform(controllerbc.value);" >
+	<option value="">"Seleciona uma das opções a fazer."</option>  
+  	<option value="oprodutos">Produtos</option>
+	<option value="ovenda">Venda</option>
+	<option value="orelatorio">Relatório</option>
+	<option value="osair">Sair</option></select>
 
-		Descrição :<input type="text" name="descricao"><br> Valor Compra :<input
-			type="text" name="valor_compra"><br> Valor venda :<input type="text"
-			name="valor_venda"><br> <input type="submit" name="acao"
-			value="Inserir"> <input type="submit" name="acao"
-			value="Alterar"> <input type="submit" name="acao"
-			value="Consultar"> <input type="submit" name="acao"
-			value="Excluir">
-	</form>
+		
+<table border="11px" id="tformproduto" width="20%"><td id="tformproduto2" width="102%;"></center><br>
+Id:  <input type="text" name="iid" id="iidp" style="width:230px"/></br>
+Descricao:  <input type="text" name="idesc" id="idescricao" style="width:230px"/></br>
+Valor Compra:  <input type="text" name="ivcompra" id="ivalorcompra" style="width:230px" /></br>
+Valor Venda:  <input type="text" name="ivvenda" id="ivalorvenda" style="width:230px" /></br>
+Quantidade:  <input type="text" name="iqnt" id="iqntes" style="width:230px"/></br>
+</center></br></td></table></form></br>
+
+
+<table border="11px" id="tformvenda" width="20%"><td id="tformvenda2" width="102%;"></center><br>
+Codigo Venda:  <input type="text" name="icvenda" id="icodvenda" style="width:230px" disabled="true"/><br><br>
+Codigo Produto:  <input type="text" name="icproduto" id="icodproduto" style="width:230px"/></br><br>
+Quantidade:  <input type="text" name="iqnt" id="iquantidade" style="width:230px" /></br><br>
+Valor Total:  <input type="text" name="ivtotal" id="ivalortotal" style="width:230px" disabled="true" /></br>
+</center></br></td></table></form></br>
+
+
+<center><input type="submit" name="acao" value="Inserir" id="btinserir" style="display:none;">
+<input type="submit" name="acao" value="Alterar" id="btp1" style="display:none;">
+<input type="submit" name="acao" value="Consultar" id="btp2" style="display:none;">
+<input type="submit" name="acao" value="Excluir" id="btp3" style="display:none;">
+<input type="submit" name="acao" value="Voltar" id="btvoltar" style="display:none;"></center>
+
+<script src="JQuery.mim.js"></script>
+<script src="JQuery.js"></script>
+
 </body>
 </html>
