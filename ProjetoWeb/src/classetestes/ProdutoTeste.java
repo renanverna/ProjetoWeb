@@ -2,17 +2,23 @@ package classetestes;
 
 import java.text.ParseException;
 
-import classenegocio.Produto;
-import transferobject.ProdutoTO;
 
 public class ProdutoTeste {
 
 	public static void main(String[] args) throws ParseException {
 		//Produto produto = new Produto("SMINORF", 1.0 ,1.0, 800);
-		Produto produto = new Produto();
+		//Produto produto = new Produto();
 		
-
-		produto.carregar();
+		int id = 9;
+		String x = null;
+		String y = null;
+		
+		
+		
+		if ((id >= 0) && (x == null || y == null)) {
+		    System.out.println("OK");
+		}
+		//produto.carregar();
 			
 		//produto.setDescricao("SWmiNorf");
 	    //produto.setValor_compra(10.5);
@@ -22,7 +28,7 @@ public class ProdutoTeste {
 		//Venda v = new Venda();
 		//v.criar();
 		
-		System.out.println(produto.getId());
+		//System.out.println(produto.getId());
 		
 		
 		//Produto produto = new Produto();
